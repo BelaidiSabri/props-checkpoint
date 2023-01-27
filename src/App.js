@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/Profile';
+import Saitama from './profile/photos/saitama.jpg'
 
 function App() {
+  const alertMe = (name) => {
+    alert(`hello i'm ${name}`)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile alertMe={alertMe} fullName='saitama' bio='25 years old bold man ' profession='hero for fun' > 
+      <img src={Saitama} alt='saitama' width={'500px'} height={'auto'} border={'10px'} style={{borderColor:'aliceblue',marginTop:'60px'}}></img> 
+      </Profile>
     </div>
   );
 }
